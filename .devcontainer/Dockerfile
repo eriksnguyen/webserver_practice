@@ -29,7 +29,7 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /home/app
 
 # Install the service dependencies
-COPY pyproject.toml ./
+COPY pyproject.toml poetry.lock ./
 
 RUN pip install --upgrade pip && \
     pip install poetry==1.8.3
