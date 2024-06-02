@@ -2,10 +2,10 @@
 
 set -eux
 
-# pylint \
-#     --rcfile .static_analysis/.pylintrc \
-#     connect4 \
-#     tests
+pylint \
+    --rcfile .static_analysis/.pylintrc \
+    connect4 \
+    tests
 
 isort \
     --settings-file .static_analysis/.isort.cfg \

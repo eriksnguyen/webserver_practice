@@ -27,7 +27,7 @@ def test_replace_mixin():
 @dataclass
 class Base(SerializeMixin):
     @dataclass
-    class Args(ReplaceMixin, SerializeMixin):
+    class Args(ReplaceMixin, SerializeMixin):  # pylint:disable="too-many-instance-attributes"
         @dataclass
         class Nested(SerializeMixin):
             x: Path
