@@ -40,3 +40,8 @@ dev-recreate: | dev-clean dev-up
 .PHONY: lint
 lint:
 	${ROOT_DIR}/scripts/lint_check.sh
+
+
+.PHONY: unittests
+unittests:
+	python -m pytest -svv tests/unit_tests/
