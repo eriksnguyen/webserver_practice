@@ -1,0 +1,12 @@
+services:
+  sample-developer:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      - RELEASE_NAME="sample-service"
+    volumes:
+      - .:/home/app
+    entrypoint: "tail -f /dev/null"
+    ports:
+      - "50052:50052"
