@@ -37,3 +37,6 @@ dev-recreate: | dev-clean dev-up
 ###
 ### Commands for **inside** of Docker container development.
 ###
+.PHONY: lint
+lint:
+	${ROOT_DIR}/scripts/lint_check.sh

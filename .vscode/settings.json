@@ -6,12 +6,22 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit",
         },
     },
     "python.languageServer": "Pylance",
+    "pylint.args": [
+        "--rcfile=.static_analysis/.pylintrc",
+    ],
+    "isort.args": [
+        "--settings-file=.static_analysis/.isort.cfg",
+    ],
+    "black-formatter.args": [
+        "--config=.static_analysis/.black.cfg",
+    ],
     "python.analysis.typeCheckingMode": "basic",
     "files.exclude": {
         ".env": true,

@@ -1,12 +1,12 @@
 services:
-  sample-developer:
+  connect4-developer:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
     environment:
-      - RELEASE_NAME="sample-service"
+      - RELEASE_NAME="connect4-service"
     volumes:
       - .:/home/app
     entrypoint: "tail -f /dev/null"
     ports:
-      - "50052:50052"
+      - "50051:50051"
