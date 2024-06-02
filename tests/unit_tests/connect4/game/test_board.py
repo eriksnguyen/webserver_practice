@@ -1,4 +1,3 @@
-from collections import OrderedDict
 from collections.abc import Sequence
 
 import pytest
