@@ -107,8 +107,8 @@ def odict():
     )
 
 
-def test_serialize_mixin_to_json(
-    base: Base, odict: OrderedDict  # pylint: disable=redefined-outer-name
+def test_serialize_mixin_to_json(  # pylint: disable=redefined-outer-name
+    base: Base, odict: OrderedDict
 ):
     assert isinstance(base.args.list_1[0].x, Path)
     assert (
