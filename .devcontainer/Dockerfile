@@ -5,7 +5,7 @@ FROM python:3.12-slim
 ENV PYTHONUNBUFFERED=true
 
 # Point PYTHONPATH to the development directory
-ENV PYTHONPATH=/home/app/connect4
+ENV PYTHONPATH=/home/app
 
 # Expose ports for various web-server types
 ## GRPC Standard Port

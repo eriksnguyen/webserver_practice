@@ -44,4 +44,4 @@ lint:
 
 .PHONY: unittests
 unittests:
-	python -m pytest -svv tests/unit_tests/
+	pytest -svv tests/unit_tests/
