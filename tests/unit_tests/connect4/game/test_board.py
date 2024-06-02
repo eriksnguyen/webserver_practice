@@ -39,7 +39,7 @@ def test_connect4_errors():
 
 
 # NOTE: inputs are in (col, expected_row) order
-CONNECT4_TEST_CASES = {
+CONNECT4_TEST_CASES = {  # pylint: disable=consider-using-namedtuple-or-dataclass
     "no_moves": ([], False),
     "one_move": ([(0, 0)], False),
     # Player 1 wins horizontally
