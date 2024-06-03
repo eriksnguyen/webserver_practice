@@ -2,7 +2,7 @@ services:
   connect4-developer:
     build:
       context: .
-      dockerfile: .devcontainer/Dockerfile
+      dockerfile: docker/dev.Dockerfile
     environment:
       - RELEASE_NAME="connect4-service"
     volumes:
