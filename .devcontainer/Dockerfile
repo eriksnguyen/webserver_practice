@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     vim \
     make \
+    protobuf-compiler \
     && rm -rf /var/lib/apt/lists/*
 
 # Switch to the directory we'll mount the repository to. This is specified in

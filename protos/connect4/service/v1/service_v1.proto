@@ -1,0 +1,45 @@
+syntax = "proto3";
+package connect4.service.v1;
+
+
+service Connect4Service {
+  rpc Connect(ConnectionRequest) returns (ConnectionResponse);
+}
+
+
+message ConnectionRequest {
+    // Required field
+    optional RequestMetadata metadata = 1;
+    optional RequestSettings settings = 2;
+    optional ConnectionRequestBody request = 3;
+}
+
+/*
+ * Represents any client level metadata that can be used to identify the request source
+ */
+message RequestMetadata {
+    // Required field representing the client source of the request.
+    optional string client_id = 1;
+
+    // Required field representing the account / user source of the request.
+    optional string account_id = 2;
+}
+
+/*
+ * Represents any configurations that apply more generally to the service.
+ */
+message RequestSettings {
+
+}
+
+message ConnectionRequestBody {
+
+}
+
+message ConnectionResponse {
+    ConnectionResponseBody response = 1;
+}
+
+message ConnectionResponseBody {
+
+}
